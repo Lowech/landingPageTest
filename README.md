@@ -1,1 +1,1 @@
-https://lowech.github.io/landingPageTest/
+https://lowech.github.io/landingPageTest/dist/index.html
