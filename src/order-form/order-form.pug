@@ -1,0 +1,22 @@
+include ../order-button/order-button.pug
+include ../product-img/product-img.pug
+div.order-form
+  div.order-form__product-name
+    include ../product-name/product-name.pug
+  span.timer 30:00 минут
+  div.order-form__product-img
+    +product-img()(class="product-img product-img_less-width")
+  div.container-old-price
+    span.old-price старая цена
+    span.old-price__number 1.999 $
+    div.container-old-price__cross-left
+    div.container-old-price__cross-right
+  div.container-new-price
+    span.new-price новая цена 
+    span.new-price__number 999 $
+  input.order-form__name(type="text" placeholder="ваше имя")
+  img.order-form__name-question(src=require("./order-form/img/question-mark-in-a-circle.png") alt="img")
+  input.order-form__number(type="number" placeholder="номер телефона")
+  img.order-form__number-question(src=require("./order-form/img/question-mark-in-a-circle.png") alt="img")
+  div.order-form__order-button
+    +order-button("submit")

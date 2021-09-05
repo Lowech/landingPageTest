@@ -1,0 +1,15 @@
+include ../ingredient-element/ingredient-element.pug
+include ../order-button/order-button.pug
+include ../product-img/product-img.pug
+div.composition-product
+  div.composition-product_ingredient-element-center-left
+    +ingredient-element(require("./ingredient-element/img/ingredient1.jpg"),"protein")
+    +ingredient-element(require("./ingredient-element/img/ingredient3.jpg"),"cereals")
+    +ingredient-element(require("./ingredient-element/img/ingredient2.jpg"),"vitamins")
+  div.composition-product_product-img
+    +product-img()(class="product-img")
+  div.composition-product_ingredient-element-center-right
+    +ingredient-element(require("./ingredient-element/img/ingredient2.jpg"),"vitamins")
+    +ingredient-element(require("./ingredient-element/img/ingredient1.jpg"),"protein")
+    +ingredient-element(require("./ingredient-element/img/ingredient3.jpg"),"cereals")
++order-button("button")

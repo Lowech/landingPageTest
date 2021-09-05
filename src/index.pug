@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+      include reviews/reviews.pug
+      video.background-video(width="400" height="300" controls="controls" ) 
+        source(src="./img/background-video.mp4"  )
+      div.container-promo
+        include ./promo/promo.pug
+      div.container-composition-product
+        include ./composition-product/composition-product.pug
+      div.container-reviews
+        img.arrow(src=require("./img/arrow.png"), alt="img")
+        div.reviews-wrapper
+          div.reviews-wrapper_block
+            +reviews(require("./reviews/img/rik.jpg"), "John Johnson", "the most reliable productthe most reliable productthe most ")
+            +reviews(require("./reviews/img/mem.jpg"), "Tom Tomson", "the most reliable productthe the most reliable productthe the most reliable productthe")
+            +reviews(require("./reviews/img/like.jpg"), "john johnson", "most reliable productthe  most reliable productthe most reliable product")
+        img.arrow.arrow__rotation(src=require("./img/arrow.png"), alt="img")
+      div.container-promo-men
+        include ./promo-men/promo-men.pug
+      div.container-order-form
+        include ./order-form/order-form.pug

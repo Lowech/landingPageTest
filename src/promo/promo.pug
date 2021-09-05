@@ -1,0 +1,10 @@
+include ../order-button/order-button.pug
+include ../product-img/product-img.pug
+div.promo-container
+  div.product-name-wrapper
+    include ../product-name/product-name.pug
+  div.product-img-wrapper
+    +product-img(class="product-img")
+  div.promo-features
+    include ../features/features.pug
++order-button("button")

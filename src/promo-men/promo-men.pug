@@ -1,0 +1,7 @@
+include ../product-img/product-img.pug
+div.promo-men-container
+  img.img-promo-men(src=require("./img/doctor.png") alt="img")
+  +product-img()(class="product-img product-img_img-prod")
+  span.promo-men-title a good remedy helps 100%
+  div.promo-men__features-block
+    include ../features/features.pug

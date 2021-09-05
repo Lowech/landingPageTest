@@ -1,0 +1,53 @@
+.reviews-block
+  display: grid
+  grid-template-columns: 120px 200px
+  grid-template-rows: 110px 100px
+  background: linear-gradient(90deg, #aea4e3, #d3ffe8)
+  width: 400px
+  float: left
+@media screen and ( max-width: 420px )
+  .reviews-block
+    width: 320px
+
+.reviews-img
+  grid-column: 1/2
+  grid-row: 1/2
+  width: 100px
+  height: 100px
+  object-fit: cover
+
+.reviews-name
+  grid-column: 2/3
+  grid-row: 1/2
+  font:
+    family: Montserrat
+    style: normal
+    weight: bold
+    size: 24px
+  line-height: 29px
+  text-align: left
+  padding:
+      top: 10px
+      left: 10px
+  text-shadow: 1px 1px 1px black
+  word-wrap: break-word
+  overflow: auto
+  color: #FFD700
+
+.reviews-text
+  grid-column: 1/3
+  grid-row: 2/3
+  font:
+    family: Montserrat
+    style: normal
+    weight: bold
+    size: 19px
+  line-height: 23px
+  padding:
+      left: 10px
+      right: 10px
+  text-align: left
+  overflow-y: auto
+  overflow-x: none
+  word-wrap: break-word
+  color: white
