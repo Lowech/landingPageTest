@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const  webpack  = require('webpack');
 
 module.exports = {
@@ -22,6 +23,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'index.css',
           }), 
+        new CopyWebpackPlugin(//копирует ico(картинку) 
+            {
+        patterns:[
+                    {
+              from: path.resolve(__dirname, 'src/favicon.ico'),//где находится
+               to: path.resolve(__dirname, 'dist')//куда скопировать
+            }],} 
+        ),
     ],
     module: {
         rules: [
